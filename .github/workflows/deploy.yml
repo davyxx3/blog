@@ -32,6 +32,12 @@ jobs:
       - name: Build Site
         run: hugo
 
+      # For debugging purposes
+      - name: Debug Directory Structure
+        run: |
+          ls -la ${{ github.workspace }}
+          ls -la ${{ github.workspace }}/public
+
       # Deploy website to server
       - name: Deploy to Server
         uses: appleboy/ssh-action@v0.1.10
