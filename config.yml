@@ -1,5 +1,5 @@
-baseURL: "https://examplesite.com/"
-title: ExampleSite
+baseURL: "https://davyxx3.com/"
+title: davyxx3
 paginate: 5
 theme: PaperMod
 
@@ -10,14 +10,16 @@ buildExpired: false
 
 googleAnalytics: UA-123-45
 
+hasCJKLanguage: true
+
 minify:
   disableXML: true
   minifyOutput: true
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ExampleSite
-  description: "ExampleSite description"
+  title: davyxx3
+  description: "Everything about me"
   keywords: [Blog, Portfolio, PaperMod]
   author: Me
   # author: ["Me", "You"] # multiple authors
@@ -30,7 +32,7 @@ params:
   ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
+  ShowCodeCopyButtons: true
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
@@ -39,7 +41,7 @@ params:
   comments: false
   hidemeta: false
   hideSummary: false
-  showtoc: false
+  showtoc: true
   tocopen: false
 
   assets:
@@ -74,15 +76,16 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Content:
+      "My name is Davy, currently a master student of Electronic Engineering at CUHK, and I love everything about computer science and programming"
 
   socialIcons:
     - name: twitter
-      url: "https://twitter.com/"
-    - name: stackoverflow
-      url: "https://stackoverflow.com"
+      url: "https://twitter.com/davyxx3"
+    # - name: stackoverflow
+    #   url: "https://stackoverflow.com"
     - name: github
-      url: "https://github.com/"
+      url: "https://github.com/davyxx3"
 
   analytics:
     google:
@@ -96,9 +99,10 @@ params:
     hidden: true # hide everywhere but not in structured data
     hiddenInList: true # hide on list pages and home
     hiddenInSingle: true # hide on single page
+    linkFullImages: true
 
   editPost:
-    URL: "https://github.com/<path_to_repo>/content"
+    URL: "https://github.com/davyxx3/blog/tree/master/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
@@ -122,9 +126,9 @@ menu:
       name: tags
       url: /tags/
       weight: 20
-    - identifier: example
-      name: example.org
-      url: https://example.org
+    - identifier: 
+      name: about me
+      url: "https://davyxx3.com/"
       weight: 30
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
@@ -136,3 +140,9 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
